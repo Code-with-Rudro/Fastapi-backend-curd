@@ -64,27 +64,34 @@ The application provides a **clean and simple UI** where users can manage produc
 # 📂 Project Structure
 
 ```
-fastapi-crud-project
+# 📂 Project Structure
+
+fastapi-ecommerce
 │
 ├── app
-│   ├── main.py
-│   ├── routes
+│   ├── __pycache__
+│   │   └── main.cpython-314.pyc
+│   │
+│   ├── data
+│   │   └── products.json
+│   │
+│   ├── schema
+│   │   ├── __pycache__
+│   │   └── product.py
+│   │
+│   ├── service
+│   │   ├── __pycache__
 │   │   └── products.py
-│   ├── models
-│   ├── services
-│   └── database.json
+│   │
+│   ├── .env
+│   └── main.py
 │
 ├── frontend
 │   ├── index.html
-│   ├── style.css
-│   └── script.js
+│   ├── script.js
+│   └── style.css
 │
-├── images
-│   ├── homepage.png
-│   ├── create-product.png
-│   ├── update-product.png
-│   └── delete-product.png
-│
+├── venv
 ├── requirements.txt
 └── README.md
 ```
