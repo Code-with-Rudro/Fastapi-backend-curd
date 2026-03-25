@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product CRUD Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>🛒 Product CRUD Dashboard</h1>
+</header>
+
+<div class="container">
+
+<!-- CREATE -->
+<section class="card">
+<h2>Create Product</h2>
+
+<input id="c_name" placeholder="Name">
+<input id="c_brand" placeholder="Brand">
+<input id="c_category" placeholder="Category">
+<input id="c_price" placeholder="Price">
+<input id="c_stock" placeholder="Stock">
+<input id="c_image" placeholder="Image URL">
+
+<button onclick="createProduct()">Create Product</button>
+</section>
+
+
+<!-- GET -->
+<section class="card">
+<h2>Get Products</h2>
+
+<button onclick="getProducts()">Load All Products</button>
+
+<input id="searchId" placeholder="Product ID">
+<button onclick="getProductById()">Get By ID</button>
+
+<div id="productList" class="grid"></div>
+
+</section>
+
+
+<!-- UPDATE -->
+<section class="card">
+<h2>Update Product</h2>
+
+<input id="u_id" placeholder="Product ID">
+<input id="u_price" placeholder="New Price">
+<input id="u_stock" placeholder="New Stock">
+
+<button onclick="updateProduct()">Update Product</button>
+
+</section>
+
+
+<!-- DELETE -->
+<section class="card">
+<h2>Delete Product</h2>
+
+<input id="d_id" placeholder="Product ID">
+
+<button onclick="deleteProduct()">Delete Product</button>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

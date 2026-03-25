@@ -4,6 +4,7 @@ import datetime
 import uuid
 
 from fastapi import FastAPI, HTTPException, Path, Query
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from service.products import add_product, get_all_products, remove_product, change_product
 from schema.product import product, ProductUpdate
@@ -12,6 +13,13 @@ from schema.product import product, ProductUpdate
 load_dotenv()
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get('/')
 def root():
